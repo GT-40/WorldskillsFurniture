@@ -1,0 +1,36 @@
+﻿<Window x:Class="Worldskills.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Worldskills"
+        mc:Ignorable="d"
+        Title="MainWindow" SizeToContent="WidthAndHeight" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" >
+    <Grid>
+        <Grid>
+            <Grid x:Name="AuthoriseScreen" Visibility="Hidden" Margin="0,0,0,0">
+                <Label Content="Login" Height="25" Width="100" Margin="195,123,499,272"/>
+                <TextBox x:Name="LoginTextBox" Height="25" Width="204" Margin="300,100,290,232"/>
+                <Label Content="Password" Height="25" Width="100" Margin="195,163,499,244" />
+                <PasswordBox x:Name="PasswordInput" Height="25" Width="204" Margin="300,163,290,244"/>
+                <Label x:Name="CapchaLabel" Margin="195,222,420,144" FontFamily="Harlow Solid Italic"  FontSize="36" />
+                <Button x:Name="LogInButton" Content="Log in" Click="LogInButton_Click" Margin="327,284,344,105" Height="31" Width="123"/>
+                <TextBox x:Name="CapchaInput" Height="54" Margin="373,222,242,144" TextWrapping="Wrap" Text=""  Width="178"/>
+                <Button x:Name="LogUp" Content="Log up a customer" Margin="327,357,344,44" Height="31" Width="123" Click="LogUp_Click"/>
+            </Grid>
+            
+            <Grid x:Name="RegistrationWindow" Visibility="Visible" Margin="0,0,0.4,0">
+                
+                <Button x:Name="BackButton" Content="Back" Margin="327,378,344,23" Height="35" Width="123" Click="BackButton_Click"/>
+                <TextBox x:Name="newSurnameInput" HorizontalAlignment="Left" Height="25" Margin="401,52,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="131"/>
+                <TextBox x:Name="newNameInput" HorizontalAlignment="Left" Height="25" Margin="401,98,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="131"/>
+                <TextBox x:Name="newMiddleNameInput" HorizontalAlignment="Left" Height="25" Margin="401,144,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="131"/>
+                <Button x:Name="AddUser" Content="Добавить заказчика" HorizontalAlignment="Left" Height="35" Margin="327,338,0,0" VerticalAlignment="Top" Width="123" Click="AddUser_Click"/>
+                <TextBox x:Name="newLoginInput" HorizontalAlignment="Left" Height="25" Margin="401,193,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="131"/>
+                <TextBox x:Name="newPasswordInput" HorizontalAlignment="Left" Height="25" Margin="401,247,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="131"/>
+            </Grid>
+        </Grid>
+        
+    </Grid>
+
+</Window>
